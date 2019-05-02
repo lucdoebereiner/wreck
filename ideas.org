@@ -1,0 +1,47 @@
+Two or Three levels 
+
+// functions may not be necessary
+fn -> double... -> double 
+
+fn foo(x) = pow(x,3) + 0.5
+
+// proc -> double|proc... -> double (+ update of args/locals)
+
+proc saw(ph,inc) = ph % 1.0 , (ph+inc, inc)
+
+if firstiteration then
+ init local variables
+else 
+
+proc foo(x) = pow(x,3) + 0.5 
+
+proc proc2(x) = pow(foo(x),3) + 0.5 
+
+let a = foo(5)
+
+a()
+a()
+
+foo(5)()
+
+//synth -> double|proc.. -> proc 
+
+mesh fbsaw(s1) =
+   let p1 = saw(0, s1*1500+10.5) in p1 , (p1) 
+
+perform(fbsaw(0))
+
+perform(proc) = proc(); proc();...
+
+
+// multichannel
+[a,b,c] -> make array
+dup(2,element) -> fill/duplicate, if array will be repeated and flattened
+collect(5,foo) -> collect with function // array of doubles or processes
+at(array,0) -> access, or array{i}
+sum(array) -> mix
+
+
+
+
+
